@@ -1,0 +1,417 @@
+// ========================================
+// 💰 PRICING SECTION - 3 PLANS | CONVERSION FOCUSED
+// Most Popular • Annual Discount • 2026
+// ========================================
+
+
+.pricing {
+  padding: var(--space-16) 0;
+  background: var(--bg);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- GRID BACKGROUND LINES ---------- */
+.pricing-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  
+  background-image: 
+    linear-gradient(90deg, 
+      rgba(var(--primary-rgb), 0.03) 1px, 
+      transparent 1px
+    ),
+    linear-gradient(0deg, 
+      rgba(var(--primary-rgb), 0.03) 1px, 
+      transparent 1px
+    );
+  background-size: 60px 60px;
+}
+
+/* ---------- SECTION HEADER ---------- */
+.pricing-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-badge {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  backdrop-filter: var(--blur-md);
+}
+
+.pricing-title {
+  font-size: clamp(2.2rem, 5vw, var(--fs-4xl));
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--text);
+}
+
+.pricing-title-gradient {
+  background: linear-gradient(135deg, 
+    var(--primary) 0%,
+    var(--secondary) 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.pricing-subtitle {
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- BILLING TOGGLE ---------- */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.billing-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-base);
+  font-weight: $fw-medium;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.billing-option.active {
+  color: var(--primary);
+}
+
+.billing-save {
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+  font-size: var(--fs-sm);
+  font-weight: $fw-bold;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+/* ---------- TOGGLE SWITCH ---------- */
+.toggle-switch {
+  width: 56px;
+  height: 32px;
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: all var(--transition-fast);
+  }
+  
+  &.active::after {
+    left: 28px;
+  }
+}
+
+/* ---------- PRICING GRID - 3 CARDS ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
+
+/* ---------- PRICING CARD ---------- */
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  border-radius: 28px;
+  padding: var(--space-8);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-8px);
+    border-color: rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.2);
+  }
+  
+  &.popular {
+    border: 2px solid var(--primary);
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.3);
+    transform: scale(1.05);
+    
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      transform: scale(1);
+    }
+    
+    &::before {
+      content: '★ MOST POPULAR';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-primary);
+      color: white;
+      font-size: var(--fs-sm);
+      font-weight: $fw-bold;
+      padding: 6px 20px;
+      border-radius: var(--radius-full);
+      letter-spacing: 2px;
+      white-space: nowrap;
+      box-shadow: var(--shadow-primary);
+      z-index: 3;
+    }
+  }
+}
+
+/* ---------- PLAN HEADER ---------- */
+.plan-name {
+  font-size: var(--fs-2xl);
+  font-weight: $fw-bold;
+  margin-bottom: var(--space-2);
+  color: var(--text);
+}
+
+.plan-desc {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-5);
+  line-height: 1.6;
+}
+
+/* ---------- PRICE ---------- */
+.plan-price {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid rgba(var(--border), 0.2);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  
+  .currency {
+    font-size: var(--fs-xl);
+    font-weight: $fw-semibold;
+    color: var(--text);
+  }
+  
+  .amount {
+    font-size: var(--fs-4xl);
+    font-weight: $fw-bold;
+    color: var(--text);
+    line-height: 1;
+  }
+  
+  .period {
+    font-size: var(--fs-base);
+    color: var(--text-muted);
+    margin-left: 4px;
+  }
+}
+
+.price-annual {
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  margin-top: var(--space-2);
+  font-weight: $fw-semibold;
+  
+  i {
+    margin-right: 4px;
+  }
+}
+
+/* ---------- PLAN FEATURES ---------- */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-6);
+  flex-grow: 1;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  
+  i {
+    color: var(--primary);
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  
+  &.disabled {
+    opacity: 0.5;
+    
+    i {
+      color: var(--text-muted);
+    }
+  }
+}
+
+/* ---------- PLAN CTA ---------- */
+.plan-cta {
+  width: 100%;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: $fw-semibold;
+  font-size: var(--fs-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  margin-top: auto;
+  
+  &.primary {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-primary);
+    }
+  }
+  
+  &.outline {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid rgba(var(--primary-rgb), 0.3);
+    
+    &:hover {
+      border-color: var(--primary);
+      background: rgba(var(--primary-rgb), 0.05);
+      color: var(--primary);
+    }
+  }
+  
+  &.popular {
+    background: var(--primary);
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-primary);
+  }
+}
+
+/* ---------- MONEY BACK ---------- */
+.money-back {
+  text-align: center;
+  margin-top: var(--space-8);
+  position: relative;
+  z-index: 2;
+  padding: var(--space-5);
+  background: rgba(var(--bg-card), 0.5);
+  border-radius: var(--radius-full);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  backdrop-filter: var(--blur-sm);
+  
+  i {
+    color: var(--primary);
+    font-size: 20px;
+    margin-right: var(--space-2);
+  }
+  
+  span {
+    color: var(--text-secondary);
+    font-size: var(--fs-base);
+    font-weight: $fw-medium;
+    
+    strong {
+      color: var(--primary);
+    }
+  }
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  .pricing-grid-bg {
+    background-image: 
+      linear-gradient(90deg, 
+        rgba(var(--primary-rgb), 0.05) 1px, 
+        transparent 1px
+      ),
+      linear-gradient(0deg, 
+        rgba(var(--primary-rgb), 0.05) 1px, 
+        transparent 1px
+      );
+  }
+  
+  .pricing-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.05);
+    
+    &.popular {
+      border: 2px solid var(--primary);
+      box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.15);
+    }
+  }
+  
+  .toggle-switch {
+    background: var(--bg-card-light);
+  }
+}

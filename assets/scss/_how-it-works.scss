@@ -1,0 +1,194 @@
+// ========================================
+// ⚡ HOW IT WORKS - 4 STEPS | DEPLOY IN MINUTES
+// Timeline • Numbered Cards • Premium
+// ========================================
+
+.how-it-works {
+  padding: var(--space-16) 0;
+  background: var(--bg);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* ---------- GRID BACKGROUND (SUBTLE) ---------- */
+.how-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(90deg, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(var(--primary-rgb), 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.4;
+}
+
+/* ---------- SECTION HEADER ---------- */
+.how-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.how-badge {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: var(--space-2) var(--space-5);
+  background: rgba(var(--primary-rgb), 0.1);
+  border: 1px solid rgba(var(--primary-rgb), 0.25);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  backdrop-filter: var(--blur-md);
+}
+
+.how-title {
+  font-size: clamp(2rem, 4vw, var(--fs-3xl));
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--text);
+}
+
+.how-title-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.how-subtitle {
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ---------- STEPS GRID - 4 CARDS ---------- */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* ---------- STEP CARD (TIMELINE STYLE) ---------- */
+.step-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  border-radius: 24px;
+  padding: var(--space-6);
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 15px 30px -15px rgba(var(--primary-rgb), 0.15);
+    
+    .step-number {
+      background: var(--gradient-primary);
+      color: white;
+      border-color: transparent;
+    }
+  }
+}
+
+/* ---------- STEP NUMBER (NEON CIRCLE) ---------- */
+.step-number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xl);
+  font-weight: $fw-bold;
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  transition: all 0.3s;
+}
+
+/* ---------- STEP CONTENT ---------- */
+.step-title {
+  font-size: var(--fs-xl);
+  font-weight: $fw-bold;
+  margin-bottom: var(--space-3);
+  color: var(--text);
+}
+
+.step-desc {
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--primary);
+  font-size: var(--fs-sm);
+  font-weight: $fw-semibold;
+  
+  i {
+    font-size: 18px;
+  }
+}
+
+/* ---------- TIMELINE CONNECTOR (DESKTOP) ---------- */
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .steps-grid {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 15%;
+      width: 70%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        rgba(var(--primary-rgb), 0.1) 0%,
+        var(--primary) 50%,
+        rgba(var(--primary-rgb), 0.1) 100%
+      );
+      z-index: -1;
+      opacity: 0.3;
+    }
+  }
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  .step-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}

@@ -1,0 +1,747 @@
+// ========================================
+// 💬 DEMO SECTION - LIVE CHAT PREVIEW
+// MOBILE OPTIMIZED • RESPONSIVE • CLEAN
+// ========================================
+
+.demo {
+  padding: var(--space-12) 0;
+  background: var(--bg);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding: var(--space-8) 0;
+    min-height: auto;
+  }
+}
+
+/* ---------- GRID BACKGROUND ---------- */
+.demo-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  
+  background-image: 
+    linear-gradient(90deg, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    background-size: 40px 40px;
+    opacity: 0.5;
+  }
+}
+
+/* ---------- DEMO WRAPPER ---------- */
+.demo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    gap: var(--space-6);
+  }
+}
+
+/* ---------- DEMO CONTENT (LEFT) ---------- */
+.demo-content {
+  max-width: 500px;
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+.demo-badge {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  backdrop-filter: var(--blur-md);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    font-size: var(--fs-xs);
+    letter-spacing: 2px;
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+.demo-title {
+  font-size: clamp(1.8rem, 5vw, var(--fs-4xl));
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--text);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    margin-bottom: var(--space-3);
+  }
+}
+
+.demo-title-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.demo-desc {
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-5);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    margin-bottom: var(--space-4);
+  }
+}
+
+/* ---------- DEMO STATS ---------- */
+.demo-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    justify-content: center;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.demo-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 100%;
+    justify-content: center;
+    background: rgba(var(--primary-rgb), 0.03);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+  }
+  
+  i {
+    font-size: 24px;
+    color: var(--primary);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: 20px;
+    }
+  }
+  
+  span {
+    font-size: var(--fs-base);
+    font-weight: $fw-semibold;
+    color: var(--text);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-sm);
+    }
+    
+    strong {
+      color: var(--primary);
+      font-size: var(--fs-xl);
+      margin-right: 4px;
+      
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        font-size: var(--fs-lg);
+      }
+    }
+  }
+}
+
+/* ---------- DEMO CTA ---------- */
+.demo-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    justify-content: center;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-3);
+  }
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: $fw-semibold;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--fs-sm);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+  }
+  
+  i {
+    font-size: 18px;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: 16px;
+    }
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid rgba(var(--primary-rgb), 0.3);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: $fw-semibold;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--fs-sm);
+  }
+  
+  &:hover {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.05);
+    color: var(--primary);
+  }
+  
+  i {
+    font-size: 18px;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: 16px;
+    }
+  }
+}
+
+/* ---------- CHAT PREVIEW (RIGHT) ---------- */
+.demo-chat {
+  position: relative;
+  
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    max-width: 550px;
+    margin: 0 auto;
+    order: 2;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    max-width: 100%;
+  }
+}
+
+.chat-preview {
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  border-radius: 28px;
+  padding: var(--space-6);
+  backdrop-filter: var(--blur-md);
+  box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.15);
+  position: relative;
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding: var(--space-5);
+    border-radius: 24px;
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: var(--space-4);
+    border-radius: 20px;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg,
+      rgba(var(--primary-rgb), 0.3) 0%,
+      rgba(var(--secondary-rgb), 0.2) 100%
+    );
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(10px);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      display: none;
+    }
+  }
+}
+
+/* ---------- CHAT HEADER ---------- */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(var(--border), 0.2);
+  margin-bottom: var(--space-4);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+}
+
+.chat-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    gap: var(--space-2);
+  }
+}
+
+.chat-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+.chat-info {
+  h4 {
+    font-size: var(--fs-base);
+    font-weight: $fw-bold;
+    margin-bottom: 2px;
+    color: var(--text);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-sm);
+    }
+  }
+  
+  span {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-xs);
+    }
+    
+    i {
+      color: #00C853;
+      font-size: 10px;
+    }
+  }
+}
+
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    display: none;  // Hide on mobile
+  }
+  
+  i {
+    color: var(--primary);
+    font-size: 18px;
+  }
+}
+
+/* ---------- CHAT MESSAGES ---------- */
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  min-height: 280px;
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    min-height: 240px;
+    gap: var(--space-3);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    min-height: 200px;
+    gap: var(--space-2);
+  }
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  max-width: 80%;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    max-width: 85%;
+    gap: var(--space-2);
+  }
+  
+  &.bot {
+    .message-content {
+      background: rgba(var(--primary-rgb), 0.08);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
+      border-radius: 18px 18px 18px 4px;
+    }
+  }
+  
+  &.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+    
+    .message-content {
+      background: var(--gradient-primary);
+      color: white;
+      border-radius: 18px 18px 4px 18px;
+    }
+    
+    .message-avatar {
+      background: rgba(var(--text), 0.1);
+    }
+  }
+}
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  background: rgba(var(--primary-rgb), 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 18px;
+  flex-shrink: 0;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+.message-content {
+  padding: var(--space-3) var(--space-4);
+  border-radius: 18px;
+  position: relative;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  p {
+    font-size: var(--fs-base);
+    line-height: 1.5;
+    margin: 0;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-sm);
+    }
+  }
+  
+  .message-time {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    margin-top: 4px;
+    display: block;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-xs);
+    }
+  }
+}
+
+.user .message-content .message-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- TYPING INDICATOR ---------- */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(var(--primary-rgb), 0.05);
+  border-radius: 20px;
+  width: fit-content;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  span {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    animation: typing 1.4s infinite ease-in-out;
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      width: 6px;
+      height: 6px;
+    }
+    
+    &:nth-child(1) { animation-delay: 0s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.4s; }
+  }
+}
+
+/* ---------- CHAT INPUT ---------- */
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(var(--border), 0.2);
+  margin-top: var(--space-2);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding-top: var(--space-3);
+    margin-top: var(--space-2);
+  }
+}
+
+.chat-input-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(var(--bg), 0.5);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: var(--space-2) var(--space-3);
+  }
+  
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: var(--space-2) 0;
+    color: var(--text);
+    font-size: var(--fs-base);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: var(--fs-sm);
+      padding: var(--space-2) 0;
+    }
+    
+    &::placeholder {
+      color: var(--text-muted);
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  i {
+    color: var(--primary);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: 18px;
+    }
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+/* ---------- CHAT FEATURES ---------- */
+.chat-features {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(var(--border), 0.2);
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    display: none;  // Hide on mobile to save space
+  }
+}
+
+.chat-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    font-size: var(--fs-xs);
+  }
+  
+  i {
+    color: var(--primary);
+    font-size: 16px;
+    
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ---------- FLOATING BADGE ---------- */
+.demo-chat > div:last-child {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  box-shadow: var(--shadow-primary);
+  
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    top: -8px;
+    right: -8px;
+    padding: 6px 12px;
+    font-size: var(--fs-xs);
+  }
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    top: -5px;
+    right: -5px;
+    padding: 4px 10px;
+    font-size: var(--fs-xs);
+  }
+  
+  i {
+    margin-right: 4px;
+  }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  .demo-grid-bg {
+    background-image: 
+      linear-gradient(90deg, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px);
+  }
+  
+  .chat-preview {
+    background: white;
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.1);
+  }
+  
+  .message.bot .message-content {
+    background: rgba(var(--primary-rgb), 0.04);
+  }
+}

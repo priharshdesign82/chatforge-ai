@@ -1,0 +1,207 @@
+// ========================================================
+// 🎨 CHATFORGE AI - CORE VARIABLES
+// Dark Default • Modern • Clean • 2026
+// ========================================================
+
+// --------------------------------------------------------
+// 1️⃣ COLOR SYSTEM - Dark Default
+// --------------------------------------------------------
+
+// Primary: Electric Blue
+$primary: #00D4FF;
+$primary-rgb: 0, 212, 255;
+
+// Secondary: Deep Purple  
+$secondary: #6C63FF;
+$secondary-rgb: 108, 99, 255;
+
+// Accent: Neon Green (for CTAs)
+$accent: #39FF14;
+$accent-rgb: 57, 255, 20;
+
+// Dark Theme (Default)
+$bg-dark: #0A0C10;
+$bg-card: #12141A;
+$bg-elevated: #1A1C24;
+$border-dark: #24262E;
+
+$text-primary: #FFFFFF;
+$text-secondary: #E0E0E0;
+$text-muted: #A0A0A0;
+
+// Light Theme
+$bg-light: #f3ecec;
+$bg-card-light: #F5F7FA;
+$bg-elevated-light: #EDF0F5;
+$border-light: #E2E6EA;
+
+$text-primary-light: #0A0C10;
+$text-secondary-light: #4A4E5A;
+$text-muted-light: #7A7E8A;
+
+// --------------------------------------------------------
+// 2️⃣ GRADIENTS
+// --------------------------------------------------------
+$gradient-primary: linear-gradient(135deg, $primary, $secondary);
+
+// --------------------------------------------------------
+// 3️⃣ TYPOGRAPHY
+// --------------------------------------------------------
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-display: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+$fs-sm: 0.875rem;  // 14px  
+$fs-base: 1rem;    // 16px
+$fs-lg: 1.125rem;  // 18px
+$fs-xl: 1.25rem;   // 20px
+$fs-2xl: 1.5rem;   // 24px
+$fs-3xl: 1.875rem; // 30px
+$fs-4xl: 2.25rem;  // 36px
+
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// --------------------------------------------------------
+// 4️⃣ SPACING
+// --------------------------------------------------------
+$space-2: 0.5rem;   // 8px
+$space-3: 0.75rem;  // 12px
+$space-4: 1rem;     // 16px
+$space-5: 1.25rem;  // 20px
+$space-6: 1.5rem;   // 24px
+$space-8: 2rem;     // 32px
+$space-10: 2.5rem;  // 40px
+$space-12: 3rem;    // 48px
+$space-16: 4rem;    // 64px
+
+// --------------------------------------------------------
+// 5️⃣ BORDER RADIUS
+// --------------------------------------------------------
+$radius-md: 0.5rem;    // 8px
+$radius-lg: 0.75rem;   // 12px
+$radius-xl: 1rem;      // 16px
+$radius-full: 9999px;
+
+// --------------------------------------------------------
+// 6️⃣ SHADOWS
+// --------------------------------------------------------
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.14);
+$shadow-primary: 0 4px 12px rgba($primary, 0.25);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// --------------------------------------------------------
+// 7️⃣ BLUR
+// --------------------------------------------------------
+$blur-sm: blur(4px);
+$blur-md: blur(8px);
+$blur-lg: blur(12px);
+$blur-xl: blur(24px);
+
+// --------------------------------------------------------
+// 8️⃣ TRANSITIONS
+// --------------------------------------------------------
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// --------------------------------------------------------
+// 9️⃣ BREAKPOINTS (Bootstrap 5 Compatible)
+// --------------------------------------------------------
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+// ========================================================
+// 🎯 CSS VARIABLES MAPPING - DARK DEFAULT
+// ========================================================
+
+:root {
+  // Colors
+  --primary: #{$primary};
+  --primary-rgb: #{$primary-rgb};
+  --secondary: #{$secondary};
+  --secondary-rgb: #{$secondary-rgb};
+  --accent: #{$accent};
+  --accent-rgb: #{$accent-rgb};
+  
+  // Background
+  --bg: #{$bg-dark};
+  --bg-card: #{$bg-card};
+  --border: #{$border-dark};
+  
+  // Text
+  --text: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-muted: #{$text-muted};
+  
+  // Gradients
+  --gradient-primary: #{$gradient-primary};
+  
+  // Spacing
+  --space-2: #{$space-2};
+  --space-3: #{$space-3};
+  --space-4: #{$space-4};
+  --space-5: #{$space-5};
+  --space-6: #{$space-6};
+  --space-8: #{$space-8};
+  --space-10: #{$space-10};
+  --space-12: #{$space-12};
+  --space-16: #{$space-16};
+  
+  // Typography
+  --font-sans: #{$font-sans};
+  --font-display: #{$font-display};
+  
+  --fs-sm: #{$fs-sm};
+  --fs-base: #{$fs-base};
+  --fs-lg: #{$fs-lg};
+  --fs-xl: #{$fs-xl};
+  --fs-2xl: #{$fs-2xl};
+  --fs-3xl: #{$fs-3xl};
+  --fs-4xl: #{$fs-4xl};
+  
+  // Radius
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+  --radius-full: #{$radius-full};
+  
+  // Shadows
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-primary: #{$shadow-primary};
+  --shadow-2xl: #{$shadow-2xl};
+  
+  // Blur
+  --blur-sm: #{$blur-sm};
+  --blur-md: #{$blur-md};
+  --blur-lg: #{$blur-lg};
+  --blur-xl: #{$blur-xl};
+  
+  // Transitions
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+}
+
+// --------------------------------------------------------
+// 🌙 LIGHT THEME
+// --------------------------------------------------------
+[data-theme="light"] {
+  --bg: #{$bg-light};
+  --bg-card: #{$bg-card-light};
+  --border: #{$border-light};
+  --text: #{$text-primary-light};
+  --text-secondary: #{$text-secondary-light};
+  --text-muted: #{$text-muted-light};
+}

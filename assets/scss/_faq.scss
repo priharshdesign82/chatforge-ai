@@ -1,0 +1,349 @@
+// ========================================
+// ❓ FAQ SECTION - BOOTSTRAP ACCORDION
+// No JS • Clean • Premium Neon
+// ========================================
+
+.faq {
+  padding: var(--space-16) 0;
+  background: var(--bg);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- GRID BACKGROUND LINES ---------- */
+.faq-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(90deg, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(var(--primary-rgb), 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ---------- SECTION HEADER ---------- */
+.faq-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.faq-badge {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: var(--space-2) var(--space-5);
+  background: linear-gradient(135deg, 
+    rgba(var(--primary-rgb), 0.15) 0%,
+    rgba(var(--secondary-rgb), 0.1) 100%
+  );
+  border: 1px solid rgba(var(--primary-rgb), 0.3);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  backdrop-filter: var(--blur-md);
+  animation: badgePulse 3s infinite;
+}
+
+.faq-title {
+  font-size: clamp(2.2rem, 5vw, var(--fs-4xl));
+  font-weight: $fw-bold;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--text);
+}
+
+.faq-title-gradient {
+  background: linear-gradient(135deg, 
+    var(--primary) 0%,
+    var(--secondary) 60%,
+    #A855F7 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: var(--gradient-primary);
+    filter: blur(16px);
+    opacity: 0.4;
+    z-index: -1;
+  }
+}
+
+.faq-subtitle {
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- BOOTSTRAP ACCORDION CUSTOM ---------- */
+.faq-accordion {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background: rgba(var(--bg-card), 0.6);
+  backdrop-filter: var(--blur-md);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  border-radius: 20px !important;
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+  
+  &:hover {
+    border-color: rgba(var(--primary-rgb), 0.4);
+    box-shadow: 0 10px 30px -15px rgba(var(--primary-rgb), 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+.accordion-header {
+  margin: 0;
+}
+
+.accordion-button {
+  background: transparent !important;
+  color: var(--text) !important;
+  font-size: var(--fs-lg);
+  font-weight: $fw-bold;
+  padding: var(--space-5) var(--space-6);
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 20px !important;
+  
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    font-size: var(--fs-base);
+    padding: var(--space-4);
+  }
+  
+  &::after {
+    background-image: none !important;
+    content: '\ea13' !important;  // ri-add-line
+    font-family: 'remixicon' !important;
+    font-size: 24px;
+    color: var(--text-secondary);
+    width: auto;
+    height: auto;
+    transform: none;
+    transition: all 0.3s;
+  }
+  
+  &:not(.collapsed) {
+    background: rgba(var(--primary-rgb), 0.05) !important;
+    color: var(--primary) !important;
+    
+    &::after {
+      content: '\f1af' !important;  // ri-subtract-line
+      color: var(--primary);
+      transform: rotate(0deg);
+    }
+  }
+  
+  &:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+  
+  &:hover {
+    background: rgba(var(--primary-rgb), 0.02) !important;
+    
+    &::after {
+      color: var(--primary);
+    }
+  }
+}
+
+.accordion-body {
+  padding: 0 var(--space-6) var(--space-6);
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+  
+  p {
+    margin-bottom: var(--space-3);
+  }
+  
+  ul {
+    margin: var(--space-3) 0 0;
+    padding-left: var(--space-5);
+    
+    li {
+      margin-bottom: var(--space-2);
+      
+      &::marker {
+        color: var(--primary);
+      }
+      
+      strong {
+        color: var(--primary);
+      }
+    }
+  }
+  
+  a {
+    color: var(--primary);
+    font-weight: $fw-semibold;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary);
+    
+    &:hover {
+      border-bottom-style: solid;
+    }
+  }
+}
+
+/* ---------- ACCORDION ICON WRAPPER ---------- */
+.accordion-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 16px;
+  transition: all 0.3s;
+  
+  .accordion-button:not(.collapsed) & {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+  }
+}
+
+/* ---------- FAQ CTA ---------- */
+.faq-footer {
+  text-align: center;
+  margin-top: var(--space-12);
+  position: relative;
+  z-index: 2;
+  padding: var(--space-8);
+  background: rgba(var(--bg-card), 0.4);
+  backdrop-filter: var(--blur-xl);
+  border-radius: 40px;
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  h4 {
+    font-size: var(--fs-2xl);
+    font-weight: $fw-bold;
+    margin-bottom: var(--space-2);
+    background: linear-gradient(135deg, var(--text), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  p {
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    
+    i {
+      color: var(--primary);
+      animation: pulse 2s infinite;
+    }
+  }
+}
+
+.faq-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-full);
+  font-weight: $fw-bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-primary);
+    color: white;
+  }
+  
+  i {
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+  
+  &:hover i {
+    transform: translateX(5px);
+  }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.2); }
+  50% { box-shadow: 0 0 20px 5px rgba(var(--primary-rgb), 0.1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ---------- LIGHT THEME ---------- */
+[data-theme="light"] {
+  .faq-grid-bg {
+    background-image: 
+      linear-gradient(90deg, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(var(--primary-rgb), 0.05) 1px, transparent 1px);
+  }
+  
+  .accordion-item {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    &:hover {
+      background: white;
+    }
+  }
+  
+  .faq-footer {
+    background: rgba(255, 255, 255, 0.7);
+  }
+}

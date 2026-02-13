@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>ChatForge AI — Documentation v1.0.0</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Documentation CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="doc-wrapper">
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="doc-sidebar">
+      <div class="doc-sidebar-header">
+        <div class="doc-sidebar-logo">
+          <i class="ri-robot-line"></i>
+        </div>
+        <span class="doc-sidebar-title">ChatForge AI</span>
+      </div>
+
+      <div class="theme-toggle" id="themeToggle"
+        style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px;">
+        <i class="ri-moon-line"></i>
+      </div>
+
+      <nav>
+        <ul class="doc-nav">
+          <li class="doc-nav-section">GETTING STARTED</li>
+          <li class="doc-nav-item">
+            <a href="#introduction" class="doc-nav-link active">
+              <i class="ri-information-line"></i>
+              Introduction
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#file-structure" class="doc-nav-link">
+              <i class="ri-folder-line"></i>
+              File Structure
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#quick-start" class="doc-nav-link">
+              <i class="ri-flashlight-line"></i>
+              Quick Start
+            </a>
+          </li>
+
+          <li class="doc-nav-section" style="margin-top: var(--space-6);">CUSTOMIZATION</li>
+          <li class="doc-nav-item">
+            <a href="#colors" class="doc-nav-link">
+              <i class="ri-palette-line"></i>
+              Colors & Themes
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#dark-light" class="doc-nav-link">
+              <i class="ri-contrast-line"></i>
+              Dark/Light Mode
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#scss" class="doc-nav-link">
+              <i class="ri-code-s-slash-line"></i>
+              SCSS Variables
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#content" class="doc-nav-link">
+              <i class="ri-edit-line"></i>
+              Content Editing
+            </a>
+          </li>
+
+          <li class="doc-nav-section">SECTIONS</li>
+          <li class="doc-nav-item">
+            <a href="#header" class="doc-nav-link">
+              <i class="ri-menu-line"></i>
+              Header
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#features" class="doc-nav-link">
+              <i class="ri-grid-line"></i>
+              Features
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#how-it-works" class="doc-nav-link">
+              <i class="ri-timer-line"></i>
+              How It Works
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#demo" class="doc-nav-link">
+              <i class="ri-play-circle-line"></i>
+              Live Demo
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#pricing" class="doc-nav-link">
+              <i class="ri-money-dollar-circle-line"></i>
+              Pricing
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#testimonials" class="doc-nav-link">
+              <i class="ri-star-line"></i>
+              Testimonials
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#faq" class="doc-nav-link">
+              <i class="ri-question-line"></i>
+              FAQ
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#footer" class="doc-nav-link">
+              <i class="ri-footprint-line"></i>
+              Footer
+            </a>
+          </li>
+
+          <li class="doc-nav-section">SUPPORT</li>
+          <li class="doc-nav-item">
+            <a href="#changelog" class="doc-nav-link">
+              <i class="ri-history-line"></i>
+              Changelog
+            </a>
+          </li>
+          <li class="doc-nav-item">
+            <a href="#support" class="doc-nav-link">
+              <i class="ri-customer-service-line"></i>
+              Support
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="doc-main">
+      <!-- Thank You Section -->
+      <div class="doc-section" id="introduction">
+        <div class="doc-card"
+          style="background: var(--gradient-glow); border: 1px solid rgba(var(--primary-rgb), 0.3);">
+          <span class="doc-badge">✨ THANK YOU!</span>
+          <h1 style="font-size: 2.5rem; margin-bottom: var(--space-2);">ChatForge AI <span
+              style="color: var(--primary);">v1.0.0</span></h1>
+          <p style="font-size: 1.25rem; margin-bottom: var(--space-4);">Premium AI Chatbot Landing Page Template — 2026
+            Ready</p>
+          <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <i class="ri-mail-line" style="color: var(--primary);"></i>
+              <span style="color: var(--text-secondary);">priharshdesign@gmail.com</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <i class="ri-time-line" style="color: var(--primary);"></i>
+              <span style="color: var(--text-secondary);">Support 24/7</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <h2>🚀 Introduction</h2>
+          <p><strong>ChatForge AI</strong> is a premium Bootstrap 5.3 landing page template specifically designed for AI
+            chatbot tools, SaaS platforms, and conversational AI startups.</p>
+
+          <div class="doc-grid">
+            <div class="doc-grid-item">
+              <i class="ri-robot-line"
+                style="font-size: 28px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+              <h4 style="margin-bottom: var(--space-1);">AI Chatbots</h4>
+              <p style="margin-bottom: 0;">GPT-4 ready, NLP focused</p>
+            </div>
+            <div class="doc-grid-item">
+              <i class="ri-flashlight-line"
+                style="font-size: 28px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+              <h4 style="margin-bottom: var(--space-1);">No-Code SaaS</h4>
+              <p style="margin-bottom: 0;">Drag & drop builder vibe</p>
+            </div>
+            <div class="doc-grid-item">
+              <i class="ri-bar-chart-2-line"
+                style="font-size: 28px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+              <h4 style="margin-bottom: var(--space-1);">Conversion Ready</h4>
+              <p style="margin-bottom: 0;">20-30% higher CTA clicks</p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-4);">
+            <h4>📋 Credits</h4>
+            <ul style="color: var(--text-secondary);">
+              <li>Bootstrap 5.3 — Frontend framework</li>
+              <li>Remix Icon — Premium icons</li>
+              <li>Google Fonts (Inter, Manrope, JetBrains Mono)</li>
+              <li>AOS — Scroll animations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== FILE STRUCTURE ========== -->
+      <div class="doc-section" id="file-structure">
+        <h2>📁 File Structure</h2>
+        <div class="doc-card">
+          <div class="doc-file-tree">
+            <ul style="list-style: none; padding-left: 0;">
+              <li style="margin-bottom: var(--space-1);"><strong>chatforge-ai/</strong></li>
+              <li style="margin-left: var(--space-4);">📄 index.html</li>
+              <li style="margin-left: var(--space-4);">📁 assets/</li>
+              <li style="margin-left: var(--space-8);">📁 css/</li>
+              <li style="margin-left: var(--space-12);">📄 bootstrap.min.css</li>
+              <li style="margin-left: var(--space-12);">📄 remixicon.css</li>
+              <li style="margin-left: var(--space-12);">📄 style.css</li>
+              <li
+                style="margin-left: var(--space-12); background: rgba(var(--primary-rgb), 0.1); padding: 2px 4px; border-radius: var(--radius-sm);">
+                📄 <strong>style.css</strong> ← MAIN CSS FILE</li>
+              <li style="margin-left: var(--space-8);">📁 js/</li>
+              <li style="margin-left: var(--space-12);">📄 bootstrap.bundle.min.js</li>
+              <li style="margin-left: var(--space-12);">📄 app.js</li>
+              <li style="margin-left: var(--space-8);">📁 images/</li>
+              <li style="margin-left: var(--space-4);">📁 scss/ <span style="color: var(--text-muted);">(Optional - for
+                  developers)</span></li>
+              <li style="margin-left: var(--space-12);">📄 _variables.scss</li>
+              <li style="margin-left: var(--space-12);">📄 _header.scss, _features.scss, etc.</li>
+              <li style="margin-left: var(--space-4);">📄 documentation.html</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== QUICK START ========== -->
+      <div class="doc-section" id="quick-start">
+        <h2>⚡ Quick Start (5 Minutes)</h2>
+        <div class="doc-card">
+          <div style="display: flex; gap: var(--space-4); align-items: flex-start; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3);">
+                <div
+                  style="width: 28px; height: 28px; background: var(--primary); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                  1</div>
+                <h4 style="margin-bottom: 0;">Unzip folder</h4>
+              </div>
+              <p style="margin-left: 36px;">Extract `chatforge-ai.zip` to your computer</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3);">
+                <div
+                  style="width: 28px; height: 28px; background: var(--primary); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                  2</div>
+                <h4 style="margin-bottom: 0;">Open index.html</h4>
+              </div>
+              <p style="margin-left: 36px;">Edit with VS Code, Sublime, or any editor</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3);">
+                <div
+                  style="width: 28px; height: 28px; background: var(--primary); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                  3</div>
+                <h4 style="margin-bottom: 0;">Change colors</h4>
+              </div>
+              <p style="margin-left: 36px;">Edit `assets/scss/variables.scss` → `$primary:-/*  /* ⚡ Change this to your brand color */`</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3);">
+                <div
+                  style="width: 28px; height: 28px; background: var(--primary); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                  4</div>
+                <h4 style="margin-bottom: 0;">Upload & Done!</h4>
+              </div>
+              <p style="margin-left: 36px;">Upload to server</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== COLORS & THEMES ========== -->
+      <div class="doc-section" id="colors">
+        <h2>🎨 Colors & Themes</h2>
+
+        <div class="doc-card">
+          <h3>🔵 Change Primary Color (EASIEST)</h3>
+          <p><strong>File:</strong> <code>assets/scss/variables</code></p>
+
+          <div class="doc-code">
+            <div class="doc-code-header">
+              <span class="doc-code-title">CSS Variables</span>
+              <button class="doc-code-copy" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>:root {
+  --primary: #00D4FF;        /* ← Apna color yahan change karo */
+  --primary-rgb: 0, 212, 255;  /* RGB values (same color) */
+  --secondary: #6C63FF;      /* Secondary accent */
+  --secondary-rgb: 108, 99, 255;
+}</pre>
+          </div>
+
+          <div style="display: flex; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-4);">
+            <div>
+              <span class="doc-color-swatch" style="background: #00D4FF;"></span>
+              <code>--primary: #00D4FF</code> (Default)
+            </div>
+            <div>
+              <span class="doc-color-swatch" style="background: #FF5733;"></span>
+              <code>--primary: #FF5733</code> (Orange)
+            </div>
+            <div>
+              <span class="doc-color-swatch" style="background: #8E44AD;"></span>
+              <code>--primary: #8E44AD</code> (Purple)
+            </div>
+            <div>
+              <span class="doc-color-swatch" style="background: #2ECC71;"></span>
+              <code>--primary: #2ECC71</code> (Green)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== DARK/LIGHT MODE ========== -->
+      <div class="doc-section" id="dark-light">
+        <h2>🌓 Dark / Light Mode</h2>
+
+        <div class="doc-card">
+          <h3>🎯 Set Default Theme</h3>
+          <p><strong>File:</strong> <code>index.html</code> (line 5)</p>
+
+          <div class="doc-code">
+            <div class="doc-code-header">
+              <span class="doc-code-title">Dark Mode Default (Current)</span>
+              <button class="doc-code-copy" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>&lt;html lang="en" data-theme="dark"&gt;  /* 🌙 Dark mode */</pre>
+          </div>
+
+          <div class="doc-code">
+            <div class="doc-code-header">
+              <span class="doc-code-title">Light Mode Default</span>
+              <button class="doc-code-copy" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>&lt;html lang="en" data-theme="light"&gt;  /* ☀️ Light mode */</pre>
+          </div>
+
+          <div class="doc-alert info" style="margin-top: var(--space-4);">
+            <i class="ri-information-line" style="margin-right: var(--space-2);"></i>
+            <strong>Theme Toggle:</strong> Already included in header (Sun/Moon icon). Works automatically!
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== SCSS VARIABLES ========== -->
+      <div class="doc-section" id="scss">
+        <h2>🧠 SCSS Variables (Advanced)</h2>
+
+        <div class="doc-card">
+          <h3>📁 File: <code>scss/_variables.scss</code></h3>
+
+          <div class="doc-code">
+            <div class="doc-code-header">
+              <span class="doc-code-title">SCSS Variables - Full Control</span>
+              <button class="doc-code-copy" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>// ========================================
+// 🎨 CORE VARIABLES - APNI MARZI
+// ========================================
+
+// ----- COLORS -----
+$primary: #00D4FF;        // Primary brand color
+$secondary: #6C63FF;      // Secondary accent
+$accent: #39FF14;         // CTA accent
+
+// ----- DARK THEME -----
+$bg-dark: #0A0C10;        // Background
+$bg-card: #12141A;        // Cards
+$text-primary: #FFFFFF;   // Text
+
+// ----- LIGHT THEME -----
+$bg-light: #FFFFFF;
+$bg-card-light: #F5F7FA;
+$text-primary-light: #0A0C10;
+
+// ----- SPACING -----
+$space-2: 0.5rem;         // 8px - base unit
+$space-4: 1rem;          // 16px
+$space-8: 2rem;          // 32px</pre>
+          </div>
+
+          <h4 style="margin-top: var(--space-4);">SCSS Compile Command:</h4>
+          <div class="doc-code">
+            <pre>sass --watch assets/scss/main.scss assets/css/style.css</pre>
+          </div>
+
+          <p style="margin-top: var(--space-2);">Or use online compiler: <a href="https://www.sassmeister.com/"
+              target="_blank">https://www.sassmeister.com/</a></p>
+        </div>
+      </div>
+
+      <!-- ========== CONTENT EDITING ========== -->
+      <div class="doc-section" id="content">
+        <h2>✏️ Content Editing</h2>
+
+        <div class="doc-grid">
+          <div class="doc-card">
+            <i class="ri-text" style="font-size: 24px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+            <h4>Text / Headings</h4>
+            <p>Edit directly in <code>index.html</code></p>
+            <div class="doc-code" style="margin-top: var(--space-2);">
+              <pre>&lt;h1&gt;Your Title&lt;/h1&gt;
+&lt;p&gt;Your description&lt;/p&gt;</pre>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <i class="ri-image-line" style="font-size: 24px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+            <h4>Images</h4>
+            <p>Add to <code>assets/images/</code> folder</p>
+            <div class="doc-code" style="margin-top: var(--space-2);">
+              <pre>&lt;img src="assets/images/your-image.jpg"&gt;</pre>
+            </div>
+          </div>
+
+          <div class="doc-card">
+            <i class="ri-code-line" style="font-size: 24px; color: var(--primary); margin-bottom: var(--space-2);"></i>
+            <h4>Icons</h4>
+            <p><a href="https://remixicon.com/" target="_blank">Remix Icon</a> library</p>
+            <div class="doc-code" style="margin-top: var(--space-2);">
+              <pre>&lt;i class="ri-robot-line"&gt;&lt;/i&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== PRICING TABLE ========== -->
+      <div class="doc-section" id="pricing">
+        <h2>💰 Pricing Plans</h2>
+
+        <div class="doc-card">
+          <h3>3 Plans Included:</h3>
+
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>Price</th>
+                <th>Best For</th>
+                <th>Badge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Free</strong></td>
+                <td>$0/mo</td>
+                <td>Testing</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><strong>Starter</strong></td>
+                <td>$19/mo</td>
+                <td>Growing businesses</td>
+                <td><span
+                    style="background: var(--gradient); color: white; padding: 2px 10px; border-radius: var(--radius-full); font-size: 0.75rem;">⭐
+                    MOST POPULAR</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pro</strong></td>
+                <td>$49/mo</td>
+                <td>Enterprise</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4 style="margin-top: var(--space-4);">Billing Toggle (Monthly/Annual):</h4>
+          <div class="doc-code">
+            <pre>&lt;div class="billing-toggle"&gt;
+  &lt;div class="billing-option active"&gt;Monthly&lt;/div&gt;
+  &lt;div class="toggle-switch" id="billingToggle"&gt;&lt;/div&gt;
+  &lt;div class="billing-option"&gt;Annual &lt;span class="billing-save"&gt;Save 20%&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== FAQ SECTION ========== -->
+      <div class="doc-section" id="faq">
+        <h2>❓ FAQ (Bootstrap Accordion)</h2>
+
+        <div class="doc-card">
+          <p><strong>Zero JavaScript needed!</strong> Bootstrap accordion handles everything.</p>
+
+          <div class="doc-code">
+            <div class="doc-code-header">
+              <span class="doc-code-title">FAQ Accordion Structure</span>
+              <button class="doc-code-copy" onclick="copyCode(this)">Copy</button>
+            </div>
+            <pre>&lt;div class="accordion" id="faqAccordion"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq1"&gt;
+        &lt;span class="accordion-icon"&gt;&lt;i class="ri-question-line"&gt;&lt;/i&gt;&lt;/span&gt;
+        Your Question Here?
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"&gt;
+      &lt;div class="accordion-body"&gt;
+        Your answer here...
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== CHANGELOG ========== -->
+      <div class="doc-section" id="changelog">
+        <h2>📊 Changelog</h2>
+
+        <div class="doc-card">
+          <h3 style="display: flex; align-items: center; gap: var(--space-2);">
+            <span
+              style="background: var(--gradient); color: white; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.875rem;">v1.0.0</span>
+            Initial Release — Feb 2026
+          </h3>
+
+          <ul style="color: var(--text-secondary); margin-top: var(--space-3);">
+            <li style="margin-bottom: var(--space-2);">✅ First release on WrapMarket</li>
+            <li style="margin-bottom: var(--space-2);">✨ Premium AI Chatbot Landing Page</li>
+            <li style="margin-bottom: var(--space-2);">🎨 Dark/Light theme with toggle</li>
+            <li style="margin-bottom: var(--space-2);">💬 Live Chat Demo Section with typing animation</li>
+            <li style="margin-bottom: var(--space-2);">⚡ 4-Step "How It Works" timeline</li>
+            <li style="margin-bottom: var(--space-2);">💰 3 Pricing Cards with Most Popular badge</li>
+            <li style="margin-bottom: var(--space-2);">❓ Bootstrap Accordion FAQ (8 questions)</li>
+            <li style="margin-bottom: var(--space-2);">💎 Testimonials with avatars & stats</li>
+            <li style="margin-bottom: var(--space-2);">📱 Fully responsive (mobile perfect)</li>
+            <li style="margin-bottom: var(--space-2);">🚀 SCSS source files included</li>
+            <li style="margin-bottom: var(--space-2);">📘 Clean documentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ========== SUPPORT ========== -->
+      <div class="doc-section" id="support">
+        <h2>🆘 Support</h2>
+
+        <div class="doc-card"
+          style="background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--secondary-rgb), 0.05));">
+          <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+            <div
+              style="width: 80px; height: 80px; background: var(--gradient); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center;">
+              <i class="ri-customer-service-line" style="font-size: 40px; color: white;"></i>
+            </div>
+            <div style="flex: 1;">
+              <h3 style="margin-bottom: var(--space-1);">PriHarsh Design</h3>
+              <p style="margin-bottom: var(--space-2);">We're here to help you 24/7</p>
+              <div style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;">
+                <a href="mailto:priharshdesign@gmail.com" class="doc-btn doc-btn-primary">
+                  <i class="ri-mail-line"></i>
+                  priharshdesign@gmail.com
+                </a>
+                <span style="color: var(--text-muted);">Response within 24 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <h4>📋 Before Contacting Support:</h4>
+          <ul style="color: var(--text-secondary);">
+            <li>✅ Check documentation first</li>
+            <li>✅ Include screenshot of issue</li>
+            <li>✅ Mention template version (v1.0.0)</li>
+            <li>✅ Describe steps to reproduce</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="doc-footer">
+        <div class="doc-footer-brand">
+          <i class="ri-flashlight-fill"></i>
+          <span>Design By <strong
+              style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">PriHarsh
+              Design</strong></span>
+          <i class="ri-flashlight-fill"></i>
+        </div>
+        <p style="margin-top: var(--space-3); color: var(--text-muted);">© 2026 ChatForge AI — Premium AI Chatbot
+          Template. All rights reserved.</p>
+        <p style="color: var(--text-muted); font-size: 0.875rem;">Version 1.0.0 | Updated Feb 2026</p>
+      </footer>
+    </main>
+  </div>
+</body>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/documentation.js"></script>
+</html>
