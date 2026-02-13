@@ -2368,14 +2368,13 @@ a {
 }
 
 .accordion-body {
-  padding: 0 var(--space-6) var(--space-6);
   color: var(--text-secondary);
   font-size: var(--fs-base);
   line-height: 1.7;
   border-top: 1px solid rgba(var(--primary-rgb), 0.1);
 }
 .accordion-body p {
-  margin-bottom: var(--space-3);
+  margin-bottom: 0;
 }
 .accordion-body ul {
   margin: var(--space-3) 0 0;
